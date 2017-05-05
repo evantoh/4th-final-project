@@ -21,6 +21,8 @@
     <!-- Custom Theme Style -->
     <link href={{url('assets/css/custom.min.css')}} rel="stylesheet">
 
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+
     <!-- Scripts -->
     <script>
         window.Laravel ={!! json_encode([
@@ -38,21 +40,13 @@
 
                 <!-- menu profile quick info -->
                 <div class="profile clearfix">
-
-
                 </div>
                 <!-- /menu profile quick info -->
-
                 <br />
                 @include('includes.sidebar')
-
                 @include('includes.head')
-
-
             </div>
         </div>
-
-
         <!-- page content -->
         <div class="right_col" role="main">
             <!-- top tiles -->
@@ -116,5 +110,10 @@
 
     <!-- Custom Theme Scripts -->
     <script src={{url("assets/build/js/custom.min.js")}}></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+<script>
+    $('#dob').datepicker();
+</script>
 </body>
 </html>

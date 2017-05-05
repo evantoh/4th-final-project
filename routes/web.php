@@ -34,12 +34,17 @@ Route::get('student', function () {
 });
 
 Route::get('haha', function () {
-    return view('home2');
+    return view('project.course');
 });
+
+
+
+Route::get('/home', 'HomeController@index');
+Route::get('/data', 'UnitController@index');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index');
+Route::post('addunit', 'UnitController@store');
+Route::get('/course', 'CourseController@index');
+Route::post('addcourse', 'CourseController@store');

@@ -28,7 +28,7 @@
                             <label for="last_name" class="col-md-4 control-label">Last Name</label>
 
                             <div class="col-md-6">
-                                <input id="last_name" type="text" class="form-control" name="last_name" value="{{ old('last_name') }}" required autofocus>
+                                <input id="last_name" type="text" class="form-control" name="last_name" value="{{ old('last_name') }}">
 
                                 @if ($errors->has('last_name'))
                                     <span class="help-block">
@@ -55,7 +55,7 @@
                             <label for="id_no" class="col-md-4 control-label">ID Number</label>
 
                             <div class="col-md-6">
-                                <input id="id_no" type="number" class="form-control" name="id_no" value="{{ old('id_no') }}" required autofocus>
+                                <input id="id_no" type="number" class="form-control" name="id_no" value="{{ old('id_no') }}" pattern=".{5,}" required autofocus>
 
                                 @if ($errors->has('id_no'))
                                     <span class="help-block">
@@ -87,7 +87,7 @@ v                                    <option value="data_entry_operator">Data en
                             <label for="dob" class="col-md-4 control-label">Date of Birth</label>
 
                             <div class="col-md-6">
-                                <input id="dob" type="number" class="form-control" name="dob" value="{{ old('dob') }}" required autofocus>
+                                <input id="dob" type="text" class="form-control" name="dob" value="{{ old('dob') }}" required autofocus>
 
                                 @if ($errors->has('dob'))
                                     <span class="help-block">

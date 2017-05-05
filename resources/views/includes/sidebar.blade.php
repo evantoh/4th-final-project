@@ -5,9 +5,14 @@
         <ul class="nav side-menu">
             <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
-                    <li><a href="index.html">Student</a></li>
-                    <li><a href="index2.html">lecturer</a></li>
-                    <li><a href="index3.html">data entry operator</a></li>
+                    <li><a href="index.html">view Results</a></li>
+                    <li><a href="index2.html">Comment</a></li>
+                    <li><a href="{{ url('data') }}">Add Unit</a></li>
+                    <li><a href="index3.html">Add Marks</a></li>
+                    <li><a href="index3.html">Register</a></li>
+                    <li><a href="{{ url('course') }}">Add Course</a></li>
+
+
                 </ul>
             </li>
 
