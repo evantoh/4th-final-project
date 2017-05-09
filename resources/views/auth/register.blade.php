@@ -97,6 +97,20 @@ v                                    <option value="data_entry_operator">Data en
 
                             </div>
                         </div>
+         <div class="form-group{{ $errors->has('reg_number') ? ' has-error' : '' }}">
+                            <label for="reg_number" class="col-md-4 control-label">Reg Number</label>
+
+                            <div class="col-md-6">
+                                <input id="reg_number" type="text" class="form-control" name="reg_number" value="{{ old('reg_number) }}" required autofocus>
+
+                                @if ($errors->has('reg_number'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('reg_number') }}</strong>
+                                    </span>
+                                @endif
+
+                            </div>
+                        </div>
 
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                             <label for="password" class="col-md-4 control-label">Password</label>
@@ -132,5 +146,6 @@ v                                    <option value="data_entry_operator">Data en
             </div>
         </div>
     </div>
+        </div>
 </div>
 @endsection

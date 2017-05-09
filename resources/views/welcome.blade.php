@@ -1,95 +1,84 @@
 <!DOCTYPE html>
 <html lang="{{ config('app.locale') }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+    <title>{{ config('app.name', 'online result monitoring system') }}</title>
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
+    <!-- Styles -->
+    <!-- Bootstrap -->
+    <link href="{{ url('assets/vendors/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href={{url('assets/vendors/font-awesome/css/font-awesome.min.css')}} rel="stylesheet">
+    <!-- bootstrap-daterangepicker -->
+    <link href={{url('assets/vendors/bootstrap-daterangepicker/daterangepicker.css')}} rel="stylesheet">
 
-            .full-height {
-                height: 100vh;
-            }
+    <!-- Custom Theme Style -->
+    <link href={{url('assets/css/custom.min.css')}} rel="stylesheet">
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
+    <!-- Scripts -->
+    <script>
+        window.Laravel ={!! json_encode([
+            'csrfToken' => csrf_token(),
+        ]) !!};
+    </script>
+</head>
+<body class="nav-md">
+<div class="container body">
+    <div class="main_container">
+        <!-- page content -->
+        @yield('content')
+    </div>
+</div>
 
-            .position-ref {
-                position: relative;
-            }
 
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
 
-            .content {
-                text-align: center;
-            }
 
-            .title {
-                font-size: 84px;
-            }
 
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
+<!-- Scripts -->
+<!-- jQuery -->
+<script src={{url('assets/vendors/jquery/dist/jquery.min.js')}}></script>
+<!-- Bootstrap -->
+<script src={{url('assets/vendors/bootstrap/dist/js/bootstrap.min.js')}}></script>
+<!-- FastClick -->
+<script src={{url('assets/vendors/fastclick/lib/fastclick.js')}}></script>
+<!-- NProgress -->
+<script src={{url ('assets/vendors/nprogress/nprogress.js')}}></script>
+<!-- Chart.js -->
+<!-- gauge.js -->
+<script src={{url('assets/vendors/gauge.js/dist/gauge.min.js')}}></script>
+<!-- bootstrap-progressbar -->
+<script src={{url("assets/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js")}}></script>
+<!-- iCheck -->
+<script src={{url("assets/vendors/iCheck/icheck.min.js")}}></script>
+<!-- Skycons -->
+<script src={{url("assets/vendors/skycons/skycons.js")}}></script>
+<!-- Flot -->
+<script src={{url("assets/vendors/Flot/jquery.flot.js")}}></script>
+<script src={{url("assets/vendors/Flot/jquery.flot.pie.js")}}></script>
+<script src={{url("assets/vendors/Flot/jquery.flot.time.js")}}></script>
+<script src={{url("assets/vendors/Flot/jquery.flot.stack.js")}}></script>
+<script src={{url("assets/vendors/Flot/jquery.flot.resize.js")}}></script>
+<!-- Flot plugins -->
+<script src={{("assets/vendors/flot.orderbars/js/jquery.flot.orderBars.js")}}></script>
+<script src={{url("assets/vendors/flot-spline/js/jquery.flot.spline.min.js")}}></script>
+<script src={{url('assets/vendors/flot.curvedlines/curvedLines.js')}}></script>
+<!-- DateJS -->
+<script src={{url("assets/vendors/DateJS/build/date.js")}}></script>
+<!-- JQVMap -->
+<script src={{url("assets/vendors/jqvmap/dist/jquery.vmap.js")}}></script>
+<script src={{url("assets/vendors/jqvmap/dist/maps/jquery.vmap.world.js")}}></script>
+<script src={{url("assets/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js")}}></script>
+<!-- bootstrap-daterangepicker -->
+<script src={{url("assets/vendors/moment/min/moment.min.js")}}></script>
+<script src={{url("assets/vendors/bootstrap-daterangepicker/daterangepicker.js")}}></script>
 
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @if (Auth::check())
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ url('/login') }}">Login</a>
-                        <a href="{{ url('/register') }}">Register</a>
-                    @endif
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
-        </div>
-    </body>
+<!-- Custom Theme Scripts -->
+<script src={{url("assets/build/js/custom.min.js")}}></script>
+</body>
 </html>

@@ -4,10 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Result extends Model
+class Register_unit extends Model
 {
-
     protected $fillable = [
-        'unit_id', 'grade','student_id'
+        'course_title', 'course_description',
     ];
 }
