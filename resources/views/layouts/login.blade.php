@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'online result monitoring system') }}</title>
+    <title style="background-color: hsl(283,39%,53%)">Online result monitoring system </title>
 
     <!-- Styles -->
     <!-- Bootstrap -->

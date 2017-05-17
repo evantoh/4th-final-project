@@ -6,11 +6,8 @@
             <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                     <li><a href="{{url('results')}}">view Results</a></li>
-                    <li><a href="index2.html">Comment</a></li>
                     <li><a href="{{ url('data') }}">Add Unit</a></li>
-                    <li><a href="index3.html">Add Marks</a></li>
                     <li><a href="{{url('unitsdisplay')}}">Display units</a></li>
-                    <li><a href="index3.html">Register units</a></li>
                     <li><a href="{{url('displaystudents')}}">Display students with grade</a></li>
                     <li><a href="{{ url('course') }}">Add Course</a></li>
 

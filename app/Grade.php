@@ -4,10 +4,12 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Unit extends Model
+class Grade extends Model
+
 {
     protected $fillable = [
-        'unit_name','unit_description',
+        'reg_number','unit_name','grade',
     ];
-    public  $timestamps = false;
+
+    public $timestamps = false;
 }

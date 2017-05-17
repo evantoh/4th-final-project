@@ -33,8 +33,8 @@ Route::get('student', function () {
     return view('project.student');
 });
 
-Route::get('haha', function () {
-    return view('project.course');
+Route::get('/haha', function () {
+    return view('project.unit_lecturer');
 });
 
 
@@ -45,7 +45,7 @@ Route::get('/data', 'UnitController@index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
-Route::post('addunit', 'UnitController@store');
+Route::post('addnewunit', 'UnitController@store');
 Route::get('/course', 'CourseController@index');
 Route::post('addcourse', 'CourseController@store');
 Route::get('/results', 'ResultController@show');
@@ -54,5 +54,8 @@ Route::get('/displaystudents', 'StudentController@index');
 Route::get('/display', 'StudentController@show');
 Route::get('/add-grade/{student_id}', 'StudentController@showGradeForm');
 Route::get('/registerunit', 'RegisterController@index');
-Route::post('registernew', 'RegisterController@store');
+Route::post('registernewunit', 'RegisterController@store');
 Route::get('/unitsdisplay', 'Unit_displayController@show');
+Route::get('/register/student/unit/{unit_id}', 'Unit_displayController@studentUnit');
+Route::get('/grade', 'GradeController@index');
+Route::post('gradestudents', 'GradeController@store');

@@ -4,6 +4,8 @@
 <div class="container">
     <div class="row">
         <div class="col-md-4 col-md-offset-4" style="margin-top: 50px">
+            <h1 class="text-center">WELCOME TO ONLINE RESULT MONITORING SYSTEM</h1>
+
             <div class="panel panel-default">
                 <div class="panel-heading">Login</div>
                 <div class="panel-body">

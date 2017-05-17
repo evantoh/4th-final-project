@@ -3,22 +3,19 @@
 namespace App\Http\Controllers;
 
 use App\Unit;
-use App\User;
 use Illuminate\Http\Request;
-
 
 class UnitController extends Controller
 {
-    public function index()
-    {
-        $academic_advisors = User::where('user_type', 'academic_advisor')->get();
-        return view("project.data_entry_operator", compact('academic_advisors'));
-    }
-    public function store(Request $request)
-    {
-        $newunit = new Unit($request->all());
-        $newunit->save();
+   public function index()
+   {
+     return view('project.add_new_unit') ;
+   }
+   public  function store(Request $request)
+   {
+       $grade= new Unit($request->all());
+       $grade->save();
 
-        return redirect()->action('UnitController@index');
-    }
+       return redirect()->action('UnitController@index');
+   }
 }

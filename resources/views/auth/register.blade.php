@@ -11,7 +11,7 @@
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('first_name') ? ' has-error' : '' }}">
-                            <label for="first_name" class="col-md-4 control-label">Fisrt Name*</label>
+                            <label for="first_name" class="col-md-4 control-label">First Name*</label>
 
                             <div class="col-md-6">
                                 <input id="first_name" type="text" class="form-control" name="first_name" value="{{ old('first_name') }}" required autofocus>
@@ -52,10 +52,10 @@
                             </div>
                         </div>
                         <div class="form-group{{ $errors->has('id_no') ? ' has-error' : '' }}">
-                            <label for="id_no" class="col-md-4 control-label">ID Number</label>
+                            <label for="id_no" class="col-md-4 control-label">ID NUMBER</label>
 
                             <div class="col-md-6">
-                                <input id="id_no" type="number" class="form-control" name="id_no" value="{{ old('id_no') }}" pattern=".{5,}" required autofocus>
+                                <input id="id_no" type="id_no" class="form-control" name="id_no" value="{{ old('id_no') }}" required>
 
                                 @if ($errors->has('id_no'))
                                     <span class="help-block">
@@ -64,6 +64,7 @@
                                 @endif
                             </div>
                         </div>
+
                         <div class="form-group{{ $errors->has('user_type') ? ' has-error' : '' }}">
                             <label for="user_type" class="col-md-4 control-label">User type</label>
 
@@ -97,18 +98,17 @@ v                                    <option value="data_entry_operator">Data en
 
                             </div>
                         </div>
-         <div class="form-group{{ $errors->has('reg_number') ? ' has-error' : '' }}">
-                            <label for="reg_number" class="col-md-4 control-label">Reg Number</label>
+                        <div class="form-group{{ $errors->has('reg_number') ? ' has-error' : '' }}">
+                            <label for="reg_number" class="col-md-4 control-label">Registration Number</label>
 
                             <div class="col-md-6">
-                                <input id="reg_number" type="text" class="form-control" name="reg_number" value="{{ old('reg_number) }}" required autofocus>
+                                <input id="reg_number" type="text" class="form-control" name="reg_number" value="{{ old('reg_number') }}">
 
                                 @if ($errors->has('reg_number'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('reg_number') }}</strong>
                                     </span>
                                 @endif
-
                             </div>
                         </div>
 
