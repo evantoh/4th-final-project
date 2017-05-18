@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Unit;
 use Illuminate\Http\Request;
-
+use Session;
 class UnitController extends Controller
 {
    public function index()
@@ -16,6 +16,7 @@ class UnitController extends Controller
        $grade= new Unit($request->all());
        $grade->save();
 
-       return redirect()->action('UnitController@index');
+       return redirect()->action('UnitController@index')
+           ->with('message', 'Unit Successfully Added');
    }
 }

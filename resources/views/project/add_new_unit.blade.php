@@ -1,12 +1,18 @@
 @extends('layouts.app')
 
 @section('content')
+
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
                     <div class="panel-heading">Adding new unit</div>
                     <div class="panel-body">
+                        @if(Session::has('message'))
+                            <div class="alert alert-success">
+                                {{ Session::get('message') }}
+                            </div>
+                        @endif
                         <form class="form-horizontal" role="form" method="POST" action="{{ url('addnewunit') }}">
                             {{ csrf_field() }}
 
@@ -40,7 +46,7 @@
                             <div class="form-group">
                                 <div class="col-md-6 col-md-offset-4"ion>
                                     <button type="submit" class="btn btn-primary">
-                                        Register
+                                     Add
                                     </button>
                                 </div>
                             </div>

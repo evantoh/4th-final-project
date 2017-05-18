@@ -34,7 +34,7 @@ Route::get('student', function () {
 });
 
 Route::get('/haha', function () {
-    return view('project.unit_lecturer');
+    return view('project.year_of_study');
 });
 
 
@@ -59,3 +59,5 @@ Route::get('/unitsdisplay', 'Unit_displayController@show');
 Route::get('/register/student/unit/{unit_id}', 'Unit_displayController@studentUnit');
 Route::get('/grade', 'GradeController@index');
 Route::post('gradestudents', 'GradeController@store');
+Route::post('addyear', 'Year_of_studyController@store');
+Route::get('/addyear', 'Year_of_studyController@index');

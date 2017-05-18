@@ -23,14 +23,14 @@
                                     <td>{{$displayunit->unit_description}}</td>
                                     <td>
                                         <a href="{{url('register/student/unit/'.$displayunit->id)}}" class="btn btn-sm btn-primary">Register Unit</a>
+                                        <a href="{{ url('edit/student/unit/'.$displayunit->unit_name) }}"class="btn btn-sm btn-primary">Edit Unit</a>
+                                        <a href="{{ url('') }}"class="btn btn-sm btn-primary">Update Unit</a>
                                     </td>
+
                                 </tr>
                             @endforeach
 
                         </table>
-
-
-
                     </div>
                 </div>
             </div>

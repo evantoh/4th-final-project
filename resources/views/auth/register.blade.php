@@ -81,7 +81,6 @@ v                                    <option value="data_entry_operator">Data en
                                         <strong>{{ $errors->first('user_type') }}</strong>
                                     </span>
                                 @endif
-
                             </div>
                         </div>
                         <div class="form-group{{ $errors->has('dob') ? ' has-error' : '' }}">
@@ -111,7 +110,6 @@ v                                    <option value="data_entry_operator">Data en
                                 @endif
                             </div>
                         </div>
-
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                             <label for="password" class="col-md-4 control-label">Password</label>
 
@@ -132,20 +130,18 @@ v                                    <option value="data_entry_operator">Data en
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                             </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    Register
-                                </button>
+                        </div>f
+                            <div class="form-group">
+                                <div class="col-md-6 col-md-offset-4">
+                                    <button type="submit" class="btn btn-primary">
+                                        Register
+                                    </button>
+                                </div>
                             </div>
-                        </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-        </div>
 </div>
 @endsection
