@@ -26,15 +26,13 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-Route::get('/admin', function () {
-    return view('project.student');
-});
+
 Route::get('student', function () {
     return view('project.student');
 });
 
 Route::get('/haha', function () {
-    return view('project.year_of_study');
+    return view('project.choose_year_study');
 });
 
 

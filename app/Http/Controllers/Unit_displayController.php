@@ -11,10 +11,12 @@ class Unit_displayController extends Controller
 {
     public function show()
     {
+
         $student_id = Auth::user()->id;
+        $student_year = Auth::user()->year_of_study;
         $displayunits= Studentunit::all();
 
-        $units= DB::select('select * from units where id not in (select unit_id from student_units where student_id = ?)', [$student_id]);
+        $units= DB::select("select * from units where unit_year like 'Y$student_year%' and id not in (select unit_id from student_units where student_id = ?)", [ $student_id]);
         //dd($units);
         return view('project.units_display', compact('displayunits','units'));
     }

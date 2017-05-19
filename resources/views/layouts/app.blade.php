@@ -4,25 +4,17 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
     <title style="background-color: hsl(283,39%,53%)">Online result monitoring system </title>
-
-    <!-- Styles -->
     <!-- Bootstrap -->
     <link href="{{ url('assets/vendors/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
     <!-- Font Awesome -->
     <link href={{url('assets/vendors/font-awesome/css/font-awesome.min.css')}} rel="stylesheet">
     <!-- bootstrap-daterangepicker -->
-    <link href={{url('assets/vendors/bootstrap-daterangepicker/daterangepicker.css')}} rel="stylesheet">
-
-    <!-- Custom Theme Style -->
+    <link href={{url('assets/vendors/bootstrap-daterangepicker/daterangepicker.css')}} rel="stylesheet"><!-- Custom Theme Style -->
     <link href={{url('assets/css/custom.min.css')}} rel="stylesheet">
-
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-
     <!-- Scripts -->
     <script>
         window.Laravel ={!! json_encode([
@@ -35,9 +27,7 @@
     <div class="main_container">
         <div class="col-md-3 left_col">
             <div class="left_col scroll-view">
-
                 <div class="clearfix"></div>
-
                 <!-- menu profile quick info -->
                 <div class="profile clearfix">
                 </div>
@@ -65,12 +55,7 @@
         </div>
     </div>
 </div>
-
-
-
-
-
-    <!-- Scripts -->
+<!-- Scripts -->
     <!-- jQuery -->
     <script src={{url('assets/vendors/jquery/dist/jquery.min.js')}}></script>
     <!-- Bootstrap -->
