@@ -15,6 +15,8 @@ class GradeController extends Controller
     {
         $savegrade= new Grade($request->all());
         $savegrade->save();
+
+
     }
 }
 
