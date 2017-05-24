@@ -63,22 +63,21 @@
                                     @endif
                                 </div>
                             </div>
-                            <div class="form-group{{ $errors->has('unit_name') ? ' has-error' : '' }}">
-                                <label for="unit_name" class="col-md-4 control-label">Unit Name</label>
+                            <div class="form-group{{ $errors->has('unit_id') ? ' has-error' : '' }}">
+                                <label for="unit_id" class="col-md-4 control-label">Unit Name</label>
                                 <div class="col-md-6">
-                                    <select class="form-control" name="unit_name">
+                                    <select class="form-control" name="unit_id">
                                         @foreach($units as $unit)
                                             <option value="{{$unit->id}}">{{$unit->unit_name}}</option>
                                         @endforeach
                                     </select>
-                                    @if ($errors->has('unit_name'))
+                                    @if ($errors->has('unit_id'))
                                         <span class="help-block">
-                                            <strong>{{ $errors->first('unit_name') }}</strong>
+                                            <strong>{{ $errors->first('unit_id') }}</strong>
                                         </span>
                                     @endif
                                 </div>
                             </div>
-
                             <div class="form-group{{ $errors->has('user_type') ? ' has-error' : '' }}">
                                 <label for="user_type" class="col-md-4 control-label">Grade</label>
                                 <div class="col-md-6">

@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Studentunit extends Model
 {
-    protected $table = 'student_units';
 
+    protected $table = 'student_units';
     public $timestamps = false;
 
     protected $fillable = [

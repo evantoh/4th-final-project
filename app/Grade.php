@@ -8,7 +8,7 @@ class Grade extends Model
 
 {
     protected $fillable = [
-        'reg_number','unit_name','grade',
+        'reg_number','unit_id','grade'
     ];
 
     public $timestamps = false;

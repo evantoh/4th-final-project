@@ -22,20 +22,18 @@
                                     @if ($errors->has('unit_name'))
                                         <span class="help-block">
                                         <strong>{{ $errors->first('unit_name') }}</strong>
-                                    </span>
+                                        </span>
                                     @endif
                                 </div>
                             </div>
                             <div class="form-group{{ $errors->has('unit_description') ? ' has-error' : '' }}">
                                 <label for="unit_description" class="col-md-4 control-label">Unit Description</label>
-
                                 <div class="col-md-6">
                                     <input id="unit_description" type="text" class="form-control" name="unit_description" value="{{ old('unit_description') }}">
-
                                     @if ($errors->has('unit_description'))
                                         <span class="help-block">
                                         <strong>{{ $errors->first('unit_description') }}</strong>
-                                    </span>
+                                        </span>
                                     @endif
                                 </div>
                             </div>

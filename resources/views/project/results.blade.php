@@ -9,22 +9,19 @@
                     <div class="panel-body">
                         <table class="table table-bordered">
                             <thead>
-                            <tr>
-                                <td>ID</td>
-                                <td>Unit ID</td>
-                                <td>Grade</td>
-                                <td>Student ID</td>
-                            </tr>
-                        </thead>
-                                @foreach($results as $result)
                                 <tr>
-                                    <td>{{$result->id}}</td>
-                                    <td>{{$result->unit_id}}</td>
-                                    <td>{{$result->grade}}</td>
-                                    <td>{{$result->student_id}}</td>
+                                <td>Registration Number</td>
+                                <td>Unit Name</td>
+                                <td>Grade</td>
                                 </tr>
+                            </thead>
+                                @foreach($results as $result)
+                                    <tr>
+                                        <td>{{$result->reg_number}}</td>
+                                        <td>{{$result->unit->unit_name}}</td>
+                                        <td>{{$result->grade}}</td>
+                                    </tr>
                                 @endforeach
-
                         </table>
                     </div>
                     </div>
