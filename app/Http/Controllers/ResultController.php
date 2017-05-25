@@ -16,7 +16,7 @@ class ResultController extends Controller
     {
         //dd(Auth::user()->reg_number);
         $results= Result::where('reg_number', Auth::user()->reg_number)->get();
-        //dd($results[0]->unit);
+        //dd($results);
         return view('project.results', compact('results'));
     }
 }

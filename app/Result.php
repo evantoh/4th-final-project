@@ -9,10 +9,10 @@ class Result extends Model
     protected $table = 'grades';
 
     protected $fillable = [
-        'reg_number','unit_name','grade'
+        'reg_number','unit_id','grade'
     ];
 
     public function unit(){
-        return $this->belongsTo('App\Unit', 'unit_name');
+        return $this->belongsTo('App\Unit', 'unit_id');
     }
 }

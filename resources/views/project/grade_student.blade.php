@@ -64,11 +64,11 @@
                                 </div>
                             </div>
                             <div class="form-group{{ $errors->has('unit_id') ? ' has-error' : '' }}">
-                                <label for="unit_id" class="col-md-4 control-label">Unit Name</label>
+                                <label for="unit_id" class="col-md-4 control-label">Unit Names</label>
                                 <div class="col-md-6">
                                     <select class="form-control" name="unit_id">
                                         @foreach($units as $unit)
-                                            <option value="{{$unit->id}}">{{$unit->unit_name}}</option>
+                                            <option value="{{$unit->unit_id}}">{{$unit->unit_name}}</option>
                                         @endforeach
                                     </select>
                                     @if ($errors->has('unit_id'))
