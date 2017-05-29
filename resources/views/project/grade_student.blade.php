@@ -7,9 +7,9 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Grade the student</div>
                     <div class="panel-body">
-                        @if(Session::has('message'))
+                        @if(Session::has('status'))
                             <div class="alert alert-success">
-                                {{ Session::get('message') }}
+                                {{ Session::get('status') }}
                             </div>
                         @endif
                         <form class="form-horizontal" role="form" method="POST" action="{{ url('gradestudents') }}">

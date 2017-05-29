@@ -37,13 +37,13 @@
                                     @endif
                                 </div>
                             </div>
-                            <div class="form-group{{ $errors->has('unit_description') ? ' has-error' : '' }}">
-                                <label for="unit_description" class="col-md-4 control-label">Lecturer's Name </label>
+                            <div class="form-group{{ $errors->has('lecturer_name') ? ' has-error' : '' }}">
+                                <label for="lecturer_name" class="col-md-4 control-label">Lecturer's Name </label>
                                 <div class="col-md-6">
-                                    <input id="unit_description" type="text" class="form-control" name="unit_description" value="{{ old('unit_description') }}">
-                                    @if ($errors->has('unit_description'))
+                                    <input id="unit_description" type="text" class="form-control" name="lecturer_name" value="{{ old('lecturer_name') }}">
+                                    @if ($errors->has('lecturer_name'))
                                         <span class="help-block">
-                                        <strong>{{ $errors->first('unit_description') }}</strong>
+                                        <strong>{{ $errors->first('lecturer_name') }}</strong>
                                         </span>
                                     @endif
                                 </div>
