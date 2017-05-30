@@ -11,6 +11,7 @@
                     <li><a href="{{url('displaystudents')}}">Display students with grade</a></li>
                     <li><a href="{{ url('course') }}">Add Course</a></li>
                     <li><a href="{{ url('addyear') }}">Adding year </a></li>
+                    <li><a href="{{ url('assignunitslecturer') }}">Assign unit to lecturer </a></li>
                 </ul>
             </li>
         </ul>

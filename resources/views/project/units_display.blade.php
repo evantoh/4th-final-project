@@ -8,13 +8,13 @@
                     <div class="panel-heading">Display all the units</div>
                     <div class="panel-body">
                         <table class="table table-bordered">
-                          <thead>
-                            <tr>
-                                <td>ID</td>
-                                <td>Unit Name</td>
-                                <td>Unit Dscription</td>
-                                <td>Actions</td>
-                            </tr>
+                            <thead>
+                                <tr>
+                                    <td>ID</td>
+                                    <td>Unit Name</td>
+                                    <td>Unit Dscription</td>
+                                    <td>Actions</td>
+                                </tr>
                             </thead>
                             @foreach($units as $displayunit)
                                 <tr>
@@ -24,10 +24,8 @@
                                     <td>
                                         <a href="{{url('register/student/unit/'.$displayunit->id)}}" class="btn btn-sm btn-primary">Register Unit</a>
                                     </td>
-
                                 </tr>
                             @endforeach
-
                         </table>
                     </div>
                 </div>

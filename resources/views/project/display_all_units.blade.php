@@ -19,6 +19,9 @@
                                 <tr>
                                     <td>{{$unit->unit_name}}</td>
                                     <td>{{$unit->unit_description}}</td>
+                                    <td>
+                                        <a href="{{url('assign/unit/'.$unit->id)}}" class="btn btn-primary">Assign unit to lecturer</a>
+                                    </td>
                                 </tr>
                             @endforeach
                         </table>

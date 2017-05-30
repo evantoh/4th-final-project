@@ -21,8 +21,7 @@
                                     {{$student->first_name}}
                                     @if ($errors->has('first_name'))
                                         <span class="help-block">
-                                        <strong>{{ $errors->first('first_name') }}</strong>
-                                    </span>
+                                        <strong>{{ $errors->first('first_name') }}</strong></span>
                                     @endif
                                 </div>
                             </div>
@@ -104,6 +103,7 @@
                                     </div>
                         </form>
                     </div>
+            </div>
                 </div>
             </div>
         </div>
