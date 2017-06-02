@@ -23,7 +23,8 @@ class GradeController extends Controller
         }
 
 
-        return redirect()->action('StudentController@showGradeForm' , [Auth::user()->id])->with('status', 'Grade Added successfully');
+        return redirect()->action('StudentController@showGradeForm' , [Auth::user()->id])
+            ->with('status', 'Grade Added successfully');
     }
 }
 

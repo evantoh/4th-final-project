@@ -16,6 +16,7 @@ class Lecturer_unitController extends Controller
        $assignunit = new Lecturer_unit($request->all());
        $assignunit->save();
 
-       return redirect()->action('Lecturer_unitController@index');
+       return redirect()->action('Display_all_unitsController@show')
+       ->with('message', 'Unit has been Successfully Assigned');
    }
 }
