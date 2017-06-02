@@ -13,7 +13,7 @@
 //testing controller
 
 Route::get('/haha', function () {
-    return view('project.unit_lecturer');
+    return view('project.display_all_units');
 });
 
 //add new unit
@@ -54,3 +54,4 @@ Route::get('/addyear', 'Year_of_studyController@index');
 Route::get('/assignunitslecturer', 'Display_all_unitsController@show');
 Route::get('/assign/unit/{unit_id}', 'Display_all_unitsController@assignunit');
 Route::post('/lecturerunit', 'Lecturer_unitController@store');
+Route::get('/assign', 'Lecturer_unitController@index');

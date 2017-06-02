@@ -28,9 +28,5 @@ class Display_all_unitsController extends Controller
 
      return view('project.lecturer_unit',compact('units','lecturers'));
 }
-public function store()
-{
-
-}
 }
 

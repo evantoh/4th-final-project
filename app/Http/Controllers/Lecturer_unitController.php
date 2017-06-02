@@ -7,11 +7,15 @@ use Illuminate\Http\Request;
 
 class Lecturer_unitController extends Controller
 {
+    public function index()
+    {
+        return view('project.display_all_units');
+    }
    public function store(Request $request)
    {
        $assignunit = new Lecturer_unit($request->all());
        $assignunit->save();
 
-       return redirect()->action('RegisterController@index');
+       return redirect()->action('Lecturer_unitController@index');
    }
 }

@@ -11,7 +11,7 @@
                             {{ csrf_field() }}
 
                             <div class="form-group{{ $errors->has('unit_id') ? ' has-error' : '' }}">
-                                <label for="unit_id" class="col-md-4 control-label">Unit Title</label>
+                                <label for="unit_id" class="col-md-4 control-label">Unoo Title</label>
 
                                 <div class="col-md-6">
                                     <input id="unit_id" type="text" class="form-control" name=unit_id value="{{ old('unit_id') }}" required autofocus>
