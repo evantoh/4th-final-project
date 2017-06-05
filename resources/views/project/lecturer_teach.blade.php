@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Display all the units taught by the lecturer</div>
+                    <div class="panel-heading">Units am teaching</div>
                     <div class="panel-body">
                         <table class="table table-bordered">
                             <thead>
@@ -20,7 +20,7 @@
                                     <td>{{$unit->unit->unit_name}}</td>
                                     <td>{{$unit->users->first_name}}</td>
                                     <td>
-                                        <a href="{{url('')}}" class="btn btn-sm btn-primary">Display all students registered for this unit</a>
+                                        <a href="{{url('unit/all-students/'.$unit->unit->id)}}" class="btn btn-sm btn-primary">Display all students registered for this unit</a>
                                     </td>
                                 </tr>
                             @endforeach

@@ -13,4 +13,8 @@ class Studentunit extends Model
     protected $fillable = [
         'student_id','unit_id',
     ];
+
+    public function student(){
+        return $this->belongsTo('App\User', 'student_id');
+    }
 }

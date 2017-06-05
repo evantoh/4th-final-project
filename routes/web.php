@@ -15,6 +15,8 @@
 Route::get('/haha', function () {
     return view('project.lecturer_teach');
 });
+Route::get('/', 'HomeController@home');
+
 
 //add new unit
 Route::get('/data', 'UnitController@index');
@@ -57,3 +59,4 @@ Route::post('/lecturerunit', 'Lecturer_unitController@store');
 Route::get('/assign', 'Lecturer_unitController@index');
 //displaying all units taught by lecturer assigned to
 Route::get('/teaches', 'Lecturer_teachController@show');
+Route::get('/unit/all-students/{unit_id}', 'Lecturer_teachController@students');

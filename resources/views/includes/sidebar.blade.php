@@ -1,17 +1,25 @@
 <!-- sidebar menu -->
 <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
     <div class="menu_section">
-        <h3>General</h3>
         <ul class="nav side-menu">
             <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
-                    <li><a href="{{url('results')}}">view Results</a></li>
-                    <li><a href="{{ url('data') }}">Add Unit</a></li>
-                    <li><a href="{{url('unitsdisplay')}}">Display units</a></li>
-                    <li><a href="{{url('displaystudents')}}">Display students with grade</a></li>
-                    <li><a href="{{ url('course') }}">Add Course</a></li>
-                    <li><a href="{{ url('addyear') }}">Adding year </a></li>
-                    <li><a href="{{ url('assignunitslecturer') }}">Assign unit to lecturer </a></li>
+                    @if(Auth::user()->user_type == 'academic_advisor')
+                        <li><a href="{{url('results')}}">view Results</a></li>
+                        <li><a href="{{url('teaches')}}">units i teach</a></li>
+                    @elseif(Auth::user()->user_type == 'student')
+                        <li><a href="{{url('results')}}">view Results</a></li>
+                        <li><a href="{{url('unitsdisplay')}}">Display units</a></li>
+
+                    @elseif(Auth::user()->user_type == 'admin')
+                        <li><a href="{{ url('addyear') }}">Adding year </a></li>
+                        <li><a href="{{ url('register') }}">Registration </a></li>
+
+                    @elseif(Auth::user()->user_type == 'data_entry_operator')
+                        <li><a href="{{ url('data') }}">Add Unit</a></li>
+                        <li><a href="{{url('displaystudents')}}">Display students with grade</a></li>
+                        <li><a href="{{ url('assignunitslecturer') }}">Assign unit to lecturer </a></li>
+                    @endif
                 </ul>
             </li>
         </ul>
