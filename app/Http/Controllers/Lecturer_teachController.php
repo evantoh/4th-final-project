@@ -18,6 +18,6 @@ class Lecturer_teachController extends Controller
 
     public function students($unit_id){
         $units = Studentunit::where('unit_id', $unit_id)->get();
-         
+            return view("project.stdents_registered",compact('units'));
     }
 }
