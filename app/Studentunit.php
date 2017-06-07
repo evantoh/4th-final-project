@@ -17,4 +17,7 @@ class Studentunit extends Model
     public function student(){
         return $this->belongsTo('App\User', 'student_id');
     }
+    public function atherere(){
+        return $this->belongsTo('App\Unit', 'unit_id');
+    }
 }

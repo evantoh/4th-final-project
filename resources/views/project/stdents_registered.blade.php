@@ -15,12 +15,12 @@
                                 <td>Actions</td>
                             </tr>
                             </thead>
-                            @foreach($units as $unit)
+                            @foreach($data as $unit)
                                 <tr>
-                                    <td>{{$unit->id}}</td>
-                                    <td>{{$unit->unit_id}}</td>
+                                    <td>{{$unit->student->first_name}}</td>
+                                    <td>{{$unit->atherere->unit_name}}</td>
                                     <td>
-                                        <a href="{{url('')}}" class="btn btn-sm btn-primary"></a>
+                                        <a href="{{url('/comment/student/result/'.$unit->student_id.'/'.$unit->atherere->id)}}" class="btn btn-sm btn-primary">Comment</a>
                                     </td>
                                 </tr>
                             @endforeach

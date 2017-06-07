@@ -12,8 +12,8 @@
 */
 //testing controller
 
-Route::get('/haha', function () {
-    return view('project.lecturer_teach');
+Route::get('/yuyu', function () {
+    return view('project.comment_student');
 });
 Route::get('/', 'HomeController@home');
 
@@ -60,3 +60,5 @@ Route::get('/assign', 'Lecturer_unitController@index');
 //displaying all units taught by lecturer assigned to
 Route::get('/teaches', 'Lecturer_teachController@show');
 Route::get('/unit/all-students/{unit_id}', 'Lecturer_teachController@students');
+Route::post('commentstudent', 'Lecturer_teachController@commentStudent');
+Route::get('/comment/student/result/{user_id}/{unit_id}', 'Lecturer_teachController@index');
