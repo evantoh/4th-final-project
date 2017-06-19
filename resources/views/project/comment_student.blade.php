@@ -14,6 +14,8 @@
                         @endif
                         <form class="form-horizontal" role="form" method="POST" action="{{ url('commentstudent') }}">
                             {{ csrf_field() }}
+                            <input type="hidden" name="grade_id" value="{{$unitdetails[0]->id}}">
+                            <input type="hidden" name="user_id" value="{{ $lecturer_id = Auth::user()->id}}">
 
                             <div class="form-group{{ $errors->has('first_name') ? ' has-error' : '' }}">
                                 <label for="first_name" class="col-md-4 control-label">First Name</label>
@@ -68,6 +70,7 @@
                                         Submit
                                     </button>
                                 </div>
+                            </div>
                             </div>
                         </form>
                     </div>

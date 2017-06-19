@@ -13,11 +13,13 @@
                     @elseif(Auth::user()->user_type == 'admin')
                         <li><a href="{{ url('addyear') }}">Adding year </a></li>
                         <li><a href="{{ url('register') }}">Registration </a></li>
+                        <li><a href="{{ url('manageusers') }}">Users </a></li>
 
                     @elseif(Auth::user()->user_type == 'data_entry_operator')
                         <li><a href="{{ url('data') }}">Add Unit</a></li>
-                        <li><a href="{{url('displaystudents')}}">Display students with grade</a></li>
                         <li><a href="{{ url('assignunitslecturer') }}">Assign unit to lecturer </a></li>
+                        <li><a href="{{url('displaystudents')}}">Display students with grade</a></li>
+
                     @endif
                 </ul>
             </li>

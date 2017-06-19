@@ -62,3 +62,6 @@ Route::get('/teaches', 'Lecturer_teachController@show');
 Route::get('/unit/all-students/{unit_id}', 'Lecturer_teachController@students');
 Route::post('commentstudent', 'Lecturer_teachController@commentStudent');
 Route::get('/comment/student/result/{user_id}/{unit_id}', 'Lecturer_teachController@index');
+//managing users
+Route::get('/manageusers', 'User_managementController@show');
+

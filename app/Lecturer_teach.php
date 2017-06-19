@@ -16,7 +16,8 @@ class Lecturer_teach extends Model
         return $this->belongsTo('App\Unit', 'unit_id');
 
     }
-    public function Users(){
+    public function Users()
+    {
         return $this->belongsTo('App\User','lecturer_id');
     }
 
