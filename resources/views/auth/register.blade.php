@@ -81,11 +81,25 @@
                             <label for="dob" class="col-md-4 control-label">Date of Birth</label>
                             <div class="col-md-6">
                                 <input id="dob" type="text" class="form-control" name="dob" value="{{ old('dob') }}" required autofocus>
+                                <script type="text/javascript">
+                                    var endDate=new Date();
+                                    var startDate= new Date();
+                                    endDate.setFullYear(new Date ().getFullYear()-18);
+                                    startDate.setFullYear(new Date ().getFullYear() -55);
+                                    $('#dateOfBirth').datepicker(
+                                        {
+                                            startDate:startDate,
+                                            viewMode:"years",
+                                            endDate:endDate
+                                        }
+                                    );
+                                </script>
                                 @if ($errors->has('dob'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('dob') }}</strong>
                                     </span>
                                 @endif
+
                             </div>
                         </div>
                         <div class="form-group{{ $errors->has('reg_number') ? ' has-error' : '' }}">

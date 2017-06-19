@@ -37,17 +37,6 @@
                                     @endif
                                 </div>
                             </div>
-                            <div class="form-group{{ $errors->has('lecturer_name') ? ' has-error' : '' }}">
-                                <label for="lecturer_name" class="col-md-4 control-label">Lecturer's Name </label>
-                                <div class="col-md-6">
-                                    <input id="unit_description" type="text" class="form-control" name="lecturer_name" value="{{ old('lecturer_name') }}">
-                                    @if ($errors->has('lecturer_name'))
-                                        <span class="help-block">
-                                        <strong>{{ $errors->first('lecturer_name') }}</strong>
-                                        </span>
-                                    @endif
-                                </div>
-                            </div>
                             <div class="form-group{{ $errors->has('unit_year') ? ' has-error' : '' }}">
                                 <label for="unit_year" class="col-md-4 control-label">Unit Year</label>
                                 <div class="col-md-6">

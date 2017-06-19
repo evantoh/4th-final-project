@@ -50,14 +50,7 @@
                             </div>
                             <div class="form-group{{ $errors->has('grade') ? ' has-error' : '' }}">
                                 <label for="grade" class="col-md-4 control-label">Grade</label>
-                                <label>{{$unitdetails[0]->grade}}</label>
-                                <div class="col-md-6">
-                                    @if ($errors->has('grade'))
-                                        <span class="help-block">
-                                            <strong>{{ $errors->first('grade') }}</strong>
-                                        </span>
-                                    @endif
-                                </div>
+                                <label style="text-align: center">{{$unitdetails[0]->grade}}</label>
                             </div>
                             <div class="form-group{{ $errors->has('comment') ? ' has-error' : '' }}">
                                 <label for="comment" class="col-md-4 control-label">Comment</label>

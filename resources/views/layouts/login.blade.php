@@ -20,6 +20,7 @@
 
     <!-- Custom Theme Style -->
     <link href={{url('assets/css/custom.min.css')}} rel="stylesheet">
+    <link href={{url('assets/css/custom2.css')}} rel="stylesheet">
 
     <!-- Scripts -->
     <script>
