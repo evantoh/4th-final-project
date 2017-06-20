@@ -7,7 +7,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Display all the units</div>
                     <div class="panel-body">
-                        <table class="table table-bordered">
+                        <table class="table table-bordered" id="users">
                             <thead>
                                 <tr>
                                     <td>ID</td>

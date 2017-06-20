@@ -15,6 +15,8 @@
     <link href={{url('assets/vendors/bootstrap-daterangepicker/daterangepicker.css')}} rel="stylesheet"><!-- Custom Theme Style -->
     <link href={{url('assets/css/custom.min.css')}} rel="stylesheet">
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link href={{url('css/users.css')}} rel="stylesheet"><!-- Custom Theme Style -->
+
     <!-- Scripts -->
     <script>
         window.Laravel ={!! json_encode([
@@ -92,6 +94,7 @@
     <!-- bootstrap-daterangepicker -->
     <script src={{url("assets/vendors/moment/min/moment.min.js")}}></script>
     <script src={{url("assets/vendors/bootstrap-daterangepicker/daterangepicker.js")}}></script>
+    <script src="{{url('js/jquery.dataTables.js')}}"></script>
 
     <!-- Custom Theme Scripts -->
     <script src={{url("assets/build/js/custom.min.js")}}></script>
@@ -99,6 +102,11 @@
 
 <script>
     $('#dob').datepicker();
+</script>
+<script>
+    $(document).ready(function(){
+       $('#users').DataTable();
+    });
 </script>
 </body>
 </html>

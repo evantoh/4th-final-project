@@ -14,7 +14,6 @@
                         @endif
                         <form class="form-horizontal" role="form" method="POST" action="{{ url('gradestudents') }}">
                             {{ csrf_field() }}
-
                             <div class="form-group{{ $errors->has('first_name') ? ' has-error' : '' }}">
                                 <label for="first_name" class="col-md-4 control-label">First Name</label>
                                 <div class="col-md-6">
@@ -25,10 +24,8 @@
                                     @endif
                                 </div>
                             </div>
-
                             <div class="form-group{{ $errors->has('last_name') ? ' has-error' : '' }}">
                                 <label for="last_name" class="col-md-4 control-label">Last Name</label>
-
                                 <div class="col-md-6">
                                     {{$student->last_name}}
                                     @if ($errors->has('last_name'))
@@ -40,7 +37,6 @@
                             </div>
                             <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                                 <label for="email" class="col-md-4 control-label">Email</label>
-
                                 <div class="col-md-6">
                                         {{$student->email}}
                                     @if ($errors->has('email'))
@@ -103,7 +99,7 @@
                                     </div>
                         </form>
                     </div>
-            </div>
+                </div>
                 </div>
             </div>
         </div>

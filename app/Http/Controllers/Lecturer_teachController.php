@@ -41,18 +41,14 @@ class Lecturer_teachController extends Controller
     public function commentstudent(Request$request)
     {
        //dd($request->all());
-        //Auth::user()->id;
         if(Comment::where('user_id', $request->user_id)->where('grade_id', $request->grade_id)->exists()){
           Comment::where('user_id', $request->user_id)
                 ->where('grade_id', $request->grade_id)
                 ->update(['comment'=>$request->comment]);
-        }else {
-            $grade = new Comment($request->all());
-            $grade->save();
-        }
-    }
-    public function home()
-    {
-        return view('project.stdents_registered');
+        }else
+            {
+                $grade = new Comment($request->all());
+                $grade->save();
+             }
     }
 }

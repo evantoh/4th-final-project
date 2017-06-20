@@ -7,7 +7,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Display all the users</div>
                     <div class="panel-body">
-                        <table class="table table-bordered">
+                        <table class="table table-bordered" id="users">
                             <thead>
                             <tr>
                                 <td>First Name</td>
@@ -16,6 +16,7 @@
                                 <td>Id Number</td>
                                 <td>User type</td>
                                 <td>Date of Birth</td>
+                                <td>Actions</td>
                                 <td>Actions</td>
                             </tr>
                             </thead>
@@ -31,6 +32,7 @@
                                     <td>
                                         <a href="" class="btn btn-primary">Delete</a>
                                     </td>
+                                    <td><a href="" class="btn btn-primary">Edit</a></td>
                                 </tr>
                             @endforeach
                             </tbody>

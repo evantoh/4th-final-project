@@ -7,7 +7,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Display the student with the grade </div>
                     <div class="panel-body">
-                        <table class="table table-bordered">
+                        <table class="table table-bordered" id="users">
                             <thead>
                                 <tr>
                                 <td>Registration Number</td>
