@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
+            <div class="panel panel-default" id="">
                 <div class="panel-heading">Register</div>
                 <div class="panel-body">
                     @if(Session::has('status'))
@@ -52,7 +52,7 @@
                         <div class="form-group{{ $errors->has('id_no') ? ' has-error' : '' }}">
                             <label for="id_no" class="col-md-4 control-label">ID NUMBER</label>
                             <div class="col-md-6">
-                                <input id="id_no" type="id_no" class="form-control" name="id_no" value="{{ old('id_no') }}" required>
+                                <input id="id_no" type="number" class="form-control" name="id_no" min="0" maxlength="8" value="{{ old('id_no') }}" required>
                                 @if ($errors->has('id_no'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('id_no') }}</strong>
@@ -80,20 +80,7 @@
                         <div class="form-group{{ $errors->has('dob') ? ' has-error' : '' }}">
                             <label for="dob" class="col-md-4 control-label">Date of Birth</label>
                             <div class="col-md-6">
-                                <input id="dob" type="text" class="form-control" name="dob" value="{{ old('dob') }}" required autofocus>
-                                <script type="text/javascript">
-                                    var endDate=new Date();
-                                    var startDate= new Date();
-                                    endDate.setFullYear(new Date ().getFullYear()-18);
-                                    startDate.setFullYear(new Date ().getFullYear() -55);
-                                    $('#dateOfBirth').datepicker(
-                                        {
-                                            startDate:startDate,
-                                            viewMode:"years",
-                                            endDate:endDate
-                                        }
-                                    );
-                                </script>
+                                <input id="dob" type="text" class="form-control" readonly name="dob" value="{{ old('dob') }}" required autofocus>
                                 @if ($errors->has('dob'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('dob') }}</strong>

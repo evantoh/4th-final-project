@@ -15,10 +15,10 @@
     <link href={{url('assets/vendors/bootstrap-daterangepicker/daterangepicker.css')}} rel="stylesheet"><!-- Custom Theme Style -->
     <link href={{url('assets/css/custom.min.css')}} rel="stylesheet">
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-    <link href={{url('css/users.css')}} rel="stylesheet"><!-- Custom Theme Style -->
-
-    <!-- Scripts -->
-    <script>
+    <link href={{url('css/users.css')}} rel="stylesheet">
+    <link href={{url('https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css')}} rel="stylesheet">
+    <link href={{url('https://cdn.datatables.net/buttons/1.3.1/css/buttons.dataTables.min.css')}} rel="stylesheet">
+       <script>
         window.Laravel ={!! json_encode([
             'csrfToken' => csrf_token(),
         ]) !!};
@@ -90,23 +90,44 @@
     <!-- JQVMap -->
     <script src={{url("assets/vendors/jqvmap/dist/jquery.vmap.js")}}></script>
     <script src={{url("assets/vendors/jqvmap/dist/maps/jquery.vmap.world.js")}}></script>
-    <script src={{url("assets/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js")}}></script>
     <!-- bootstrap-daterangepicker -->
     <script src={{url("assets/vendors/moment/min/moment.min.js")}}></script>
-    <script src={{url("assets/vendors/bootstrap-daterangepicker/daterangepicker.js")}}></script>
-    <script src="{{url('js/jquery.dataTables.js')}}"></script>
+   <script src="{{url('js/jquery.dataTables.js')}}"></script>
+   <script src="{{url('https://cdn.datatables.net/buttons/1.3.1/css/buttons.dataTables.min.css')}}"></script>
+   <script src="{{url('https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js')}}"></script>
+   <script src="{{url('https://cdn.datatables.net/buttons/1.3.1/js/dataTables.buttons.min.js')}}"></script>
+   <script src="{{url('https://cdn.datatables.net/buttons/1.3.1/js/buttons.print.min.js')}}"></script>
+<script src={{url("assets/build/js/custom.min.js")}}></script>
+<script src="{{("assets/js/bootstrap-datepicker.js")}}"> </script>
+{{--
+<script src="{{("assets/js/validation.js")}}"> </script>
+--}}
 
-    <!-- Custom Theme Scripts -->
-    <script src={{url("assets/build/js/custom.min.js")}}></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-
+            <script type="text/javascript">
+                var endDate = new Date();
+                var startDate = new Date();
+                endDate.setFullYear(new Date ().getFullYear() - 18);
+                startDate.setFullYear(new Date ().getFullYear() - 55);
+                $('#dob').datepicker(
+                    {
+                        startDate: startDate,
+                        viewMode: "years",
+                        endDate: endDate
+                    }
+                );
+            </script>
 <script>
-    $('#dob').datepicker();
+    $(document).ready(function() {
+        $('#users').DataTable( {
+            dom: 'Bfrtip',
+            buttons: [
+                'print'
+            ]
+        } );
+    } );
 </script>
-<script>
-    $(document).ready(function(){
-       $('#users').DataTable();
-    });
-</script>
+{{--
+@yield('scripts')
+--}}
 </body>
 </html>
