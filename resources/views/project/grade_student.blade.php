@@ -73,7 +73,18 @@
                                     @endif
                                 </div>
                             </div>
-                            <div class="form-group{{ $errors->has('user_type') ? ' has-error' : '' }}">
+                            <div class="form-group{{ $errors->has('marks') ? ' has-error' : '' }}">
+                                <label for="marks" class="col-md-4 control-label">Marks</label>
+                                <div class="col-md-6">
+                                    <input id="marks" type="number" class="form-control" name="marks" value="{{ old('marks') }}" max="99" min="0">
+                                    @if ($errors->has('marks'))
+                                        <span class="help-block">
+                                        <strong>{{ $errors->first('marks') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
+                            </div>
+                            {{--<div class="form-group{{ $errors->has('user_type') ? ' has-error' : '' }}">
                                 <label for="user_type" class="col-md-4 control-label">Grade</label>
                                 <div class="col-md-6">
                                     <select name="grade" class="form-control">
@@ -89,7 +100,7 @@
                                         </span>
                                     @endif
                                 </div>
-                                    </div>
+                                    </div>--}}
                                     <div class="form-group">
                                         <div class="col-md-6 col-md-offset-4">
                                             <button type="submit" class="btn btn-primary">

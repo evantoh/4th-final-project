@@ -4239,3 +4239,6 @@ table thead .checkbox.radio { margin-top:-7px;margin-top:-21px; }
 .dataTables_wrapper > .row{
   overflow:auto !important; /*prevent datatables overflowing its container*/
 }
+.nav.side-menu > li.active, .nav.side-menu > li.current-page {
+    border-right: 0px solid #1ABB9C;
+}

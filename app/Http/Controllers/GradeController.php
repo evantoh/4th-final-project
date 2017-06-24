@@ -13,6 +13,18 @@ class GradeController extends Controller
     return view('project.grade_student');
     }
     public function store(Request $request){
+        if ($request->marks >= 70){
+            $request['grade'] = 'A';
+        }else if ($request->marks <70 && $request->marks >=60){
+            $request['grade'] = 'B';
+        }else if ($request->marks <60 && $request->marks >=50){
+            $request['grade'] ='C';
+        }else if ($request->marks <50 && $request->marks >=40){
+            $request['grade']='D';
+        }
+        else
+            $request['grade']
+        dd($request->all());
         if(Grade::where('unit_id', $request->unit_id)->where('reg_number', $request->reg_number)->exists()){
             Grade::where('unit_id', $request->unit_id)
                 ->where('reg_number', $request->reg_number)

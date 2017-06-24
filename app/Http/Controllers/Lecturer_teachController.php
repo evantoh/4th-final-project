@@ -49,6 +49,7 @@ class Lecturer_teachController extends Controller
             {
                 $grade = new Comment($request->all());
                 $grade->save();
+                return redirect('teaches');
              }
     }
 }
