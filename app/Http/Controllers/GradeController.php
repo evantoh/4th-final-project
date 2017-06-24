@@ -23,7 +23,7 @@ class GradeController extends Controller
             $request['grade']='D';
         }
         else
-            $request['grade'];
+            $request['grade']='F';
         dd($request->all());
         if(Grade::where('unit_id', $request->unit_id)->where('reg_number', $request->reg_number)->exists()){
             Grade::where('unit_id', $request->unit_id)
