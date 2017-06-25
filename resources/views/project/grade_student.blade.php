@@ -76,7 +76,7 @@
                             <div class="form-group{{ $errors->has('marks') ? ' has-error' : '' }}">
                                 <label for="marks" class="col-md-4 control-label">Marks</label>
                                 <div class="col-md-6">
-                                    <input id="marks" type="number" class="form-control" name="marks" value="{{ old('marks') }}" max="99" min="0">
+                                    <input id="marks" type="number" class="form-control" name="marks" value="{{ old('marks') }}" max="99" min="0" required autofocus>
                                     @if ($errors->has('marks'))
                                         <span class="help-block">
                                         <strong>{{ $errors->first('marks') }}</strong>
@@ -84,6 +84,18 @@
                                     @endif
                                 </div>
                             </div>
+                           {{-- <div class="form-group{{ $errors->has('first_name') ? ' has-error' : '' }}">
+                                <label for="first_name" class="col-md-4 control-label">First Name*</label>
+                                <div class="col-md-6">
+                                    <input id="first_name" type="text" class="form-control" name="first_name" value="{{ old('first_name') }}" required autofocus>
+
+                                    @if ($errors->has('first_name'))
+                                        <span class="help-block">
+                                        <strong>{{ $errors->first('first_name') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                            </div>--}}
                             {{--<div class="form-group{{ $errors->has('user_type') ? ' has-error' : '' }}">
                                 <label for="user_type" class="col-md-4 control-label">Grade</label>
                                 <div class="col-md-6">

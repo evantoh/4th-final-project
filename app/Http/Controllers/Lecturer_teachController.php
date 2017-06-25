@@ -30,9 +30,12 @@ class Lecturer_teachController extends Controller
     public function students($unit_id){
         $units = Studentunit::where('unit_id', $unit_id)->get();
         $data = array();
+        /*dd($units[0]);*/
         foreach ($units as $unit)
         {
-            if (Grade::where('reg_number', $unit->student->reg_number)->where('unit_id', $unit->unit_id)->exists() ){
+            if (Grade::where('reg_number',$unit->student->reg_number)
+                ->where('unit_id', $unit->unit_id)
+                ->exists()){
                 array_push($data, $unit);
             }
         }
