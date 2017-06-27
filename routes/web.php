@@ -51,19 +51,29 @@ Route::post('gradestudents', 'GradeController@store');
 //adding and updating the student's year of study
 Route::post('addyear', 'Year_of_studyController@store');
 Route::get('/addyear', 'Year_of_studyController@index');
+Route::get('/cf', 'StudentController@cf');
+//help button
+Route::get('/help_operator', function ()
+{
+    return view('project.help_data_entry');
+});
+Route::get('/help_student', function ()
+{
+    return view('project.help_student');
+});
+
+
 
 //displaying all the units
-Route::get('/assignunitslecturer', 'Display_all_unitsController@show');
-Route::get('/assign/unit/{unit_id}', 'Display_all_unitsController@assignunit');
-Route::post('/lecturerunit', 'Lecturer_unitController@store');
-Route::get('/assign', 'Lecturer_unitController@index');
+    Route::get('/assignunitslecturer', 'Display_all_unitsController@show');
+    Route::get('/assign/unit/{unit_id}', 'Display_all_unitsController@assignunit');
+    Route::post('/lecturerunit', 'Lecturer_unitController@store');
+    Route::get('/assign', 'Lecturer_unitController@index');
 //displaying all units taught by lecturer assigned to
-Route::get('/teaches', 'Lecturer_teachController@show');
-Route::get('/unit/all-students/{unit_id}', 'Lecturer_teachController@students');
-Route::post('commentstudent', 'Lecturer_teachController@commentStudent');
-Route::get('/comment/student/result/{user_id}/{unit_id}', 'Lecturer_teachController@index');
+    Route::get('/teaches', 'Lecturer_teachController@show');
+    Route::get('/unit/all-students/{unit_id}', 'Lecturer_teachController@students');
+    Route::post('commentstudent', 'Lecturer_teachController@commentStudent');
+    Route::get('/comment/student/result/{user_id}/{unit_id}', 'Lecturer_teachController@index');
 //managing users
-Route::get('/manageusers', 'User_managementController@show');
-Route::post('editusers', 'User_managementController@useredit');
-
-
+    Route::get('/manageusers', 'User_managementController@show');
+    Route::post('editusers', 'User_managementController@useredit');

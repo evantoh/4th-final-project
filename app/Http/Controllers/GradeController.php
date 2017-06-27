@@ -30,6 +30,7 @@ class GradeController extends Controller
                 ->where('reg_number', $request->reg_number)
                 ->update(['grade'=>$request->grade]);
         }else{
+          /*  $marks = Grade::where('marks_id', $[0]->id)->first();*/
             $savegrade= new Grade($request->all());
             $savegrade->save();
         }

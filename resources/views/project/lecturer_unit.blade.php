@@ -33,7 +33,7 @@
                                 <div class="col-md-6">
                                     <select name="lecturer_id" class="form-control">
                                         @foreach($lecturers as $lecturer)
-                                            <option value="{{$lecturer->id}}">{{$lecturer->first_name}}</option>
+                                            <option value="{{$lecturer->id}}">{{$lecturer->last_name}}</option>
                                         @endforeach
                                     </select>
                                     @if ($errors->has('lecturer_id'))

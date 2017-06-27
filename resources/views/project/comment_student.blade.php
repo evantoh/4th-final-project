@@ -57,7 +57,7 @@
                             <div class="form-group{{ $errors->has('comment') ? ' has-error' : '' }}">
                                 <label for="comment" class="col-md-4 control-label">Comment</label>
                                 <div class="col-md-6">
-                                    <input id="comment" type="text" class="form-control" name="comment" value="{{ old('comment') }}">
+                                    <input id="comment" type="text" class="form-control" name="comment" value="{{ $comment->comment }}">
                                     @if ($errors->has('comment'))
                                         <span class="help-block">
                                             <strong>{{ $errors->first('comment') }}</strong>
