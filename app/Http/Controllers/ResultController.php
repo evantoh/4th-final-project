@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Grade;
 use App\Result;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -14,8 +15,8 @@ class ResultController extends Controller
     }
     public function show()
     {
-        //dd(Auth::user()->reg_number);
-        $results= Result::where('reg_number', Auth::user()->reg_number)->get();
+
+        $results= Grade::where('reg_number', Auth::user()->reg_number)->get();
         //dd($results);
         return view('project.results', compact('results'));
     }

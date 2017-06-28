@@ -29,8 +29,9 @@ class GradeController extends Controller
             Grade::where('unit_id', $request->unit_id)
                 ->where('reg_number', $request->reg_number)
                 ->update(['grade'=>$request->grade]);
+           /* $marks = Grade::where('marks_id', &[0]->id)->first();*/
         }else{
-          /*  $marks = Grade::where('marks_id', $[0]->id)->first();*/
+          /*  */
             $savegrade= new Grade($request->all());
             $savegrade->save();
         }

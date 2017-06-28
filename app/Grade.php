@@ -12,4 +12,12 @@ class Grade extends Model
     ];
 
     public $timestamps = false;
+
+    public function unit(){
+        return $this->belongsTo('App\Unit', 'unit_id');
+    }
+
+    public function comment(){
+        return $this->hasOne('App\Comment', 'grade_id');
+    }
 }

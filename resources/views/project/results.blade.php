@@ -13,6 +13,7 @@
                                 <td>Registration Number</td>
                                 <td>Unit Name</td>
                                 <td>Grade</td>
+                                <td>comment</td>
                                 </tr>
                             </thead>
                                 @foreach($results as $result)
@@ -20,6 +21,7 @@
                                         <td>{{$result->reg_number}}</td>
                                         <td>{{$result->unit->unit_name}}</td>
                                         <td>{{$result->grade}}</td>
+                                        <td>{{$result->comment->comment}}</td>
                                     </tr>
                                 @endforeach
                         </table>

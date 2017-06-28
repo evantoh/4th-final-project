@@ -39,6 +39,7 @@ Route::get('/add-grade/{student_id}', 'StudentController@showGradeForm');
 Route::get('/registerunit', 'RegisterController@index');
 Route::post('/registeruser', 'HomeController@register');
 Route::post('registernewunit', 'RegisterController@store');
+Route::get('user/delete/{id}', 'RegisterController@delete');
 
 //displaying students units acording to his/her year of study and registering the units
 Route::get('/unitsdisplay', 'Unit_displayController@show');

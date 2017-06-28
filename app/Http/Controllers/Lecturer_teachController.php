@@ -18,6 +18,7 @@ class Lecturer_teachController extends Controller
         $detail = User::findorFail($user_id);
         $unitdetails = Grade::where('reg_number', $detail['reg_number'])->where('unit_id', $unit_id)->get();
         $comment = Comment::where('grade_id', $unitdetails[0]->id)->first();
+        //dd($comment);
         return view('project.comment_student', compact('detail', 'unitdetails', 'comment'));
     }
     public  function show()

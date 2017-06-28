@@ -16,7 +16,6 @@
                             <thead>
                             <tr>
                                 <th class="text-center">Id</th>
-
                                 <th class="text-center">First Name</th>
                                 <th class="text-center">Last Name</th>
                                 <th class="text-center">Email</th>
@@ -55,7 +54,7 @@
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                <button type="button"  class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                                 <h4 class="modal-title" id="myModalLabel">Edit user</h4>
                                             </div>
                                             <div class="modal-body">
@@ -94,22 +93,22 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="modal fade" id="delete{{$unit->id}}" tabindex="-1" role="dialog" aria-labelledby="#delete">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                    <h4 class="modal-title" id="myModalLabel">Delete this user</h4>
-                                            </div>
-                                            <div class="modal-body">
-                                                Are you sure you want to delete this user?
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                                <button type="button" class="btn btn-primary">Save changes</button>
+                                <div class="modal fade" id="delete{{$unit->id}}" tabindex="-1" role="dialog" aria-labelledby="#delete{{$unit->id}}">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                                    <h4 class="modal-title" id="myModalLabel">Confirm Delete {{$unit->id}}</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>You are about to delete this record</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                                    <a href="{{url('user/delete/'.$unit->id)}}" class="btn btn-danger btn-ok">Delete</a>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
                                 </div>
                             @endforeach
                             </tbody>

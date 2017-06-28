@@ -52,7 +52,7 @@
                         <div class="form-group{{ $errors->has('id_no') ? ' has-error' : '' }}">
                             <label for="id_no" class="col-md-4 control-label">ID NUMBER</label>
                             <div class="col-md-6">
-                                <input id="id_no" type="number" class="form-control" name="id_no"    value="{{ old('id_no') }}" required autofocus>
+                                <input id="id_no" type="number" min="8" max="8" class="form-control" name="id_no" value="{{ old('id_no') }}"required autofocus>
 
                                 @if ($errors->has('id_no'))
                                     <span class="help-block">
